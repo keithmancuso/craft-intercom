@@ -74,10 +74,12 @@ class IntercomPlugin extends BasePlugin
 				craft()->path->setTemplatesPath($newPath);
 
 				$user_hash =  hash_hmac("sha256", $user->email, $settings->secret_key);
+				$version = craft()->getVersion();
 
 				$code = craft()->templates->render('code', array(
 					'settings' => $settings,
-					'user_hash' => $user_hash
+					'user_hash' => $user_hash,
+					'version' => $version
 				));
 
 				craft()->templates->includeFootHtml($code);
