@@ -1,0 +1,42 @@
+{
+    "name": "familiar/intercom",
+    "description": "Craft Intercom",
+    "type": "craft-plugin",
+    "version": "0.0.1",
+    "keywords": [
+        "craft",
+        "craftcms",
+        "craft-plugin"
+    ],
+    "support": {
+        "docs": "https://github.com/familiar-studio/craft-intercom/blob/master/README.md",
+        "issues": "https://github.com/familiar-studio/craft-intercom/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Familiar Studio",
+            "homepage": "http://www.familiar-studio.com/"
+        },
+        {
+            "name": "Yurii Salimovskyi",
+            "homepage": "http://www.intoeetive.com/"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "familiar\\intercom\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Intercom",
+        "handle": "intercom",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/familiar-studio/craft-intercom/master/CHANGELOG.md",
+        "class": "familiar\\intercom\\Intercom"
+    }
+}
